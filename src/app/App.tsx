@@ -1,19 +1,25 @@
+import CredentialsForm from '@/widgets/CredentialsForm/CredentialsForm'
+import CreditCardBack from '@/widgets/CreditCardBack/CreditCardBack'
+import CreditCardFront from '@/widgets/CreditCardFront/CreditCardFront'
+import bgGradientDesktop from '@public/images/bg-main-desktop.png'
+import bgGradientMobile from '@public/images/bg-main-mobile.png'
+import useWindowWidth from './hooks/useWindowWidth'
+
 export default function App() {
+  const deviceWidth = useWindowWidth()
+  const bgImage = deviceWidth >= 1024 ? bgGradientDesktop : bgGradientMobile
   return (
-    <div>
-      0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
-      Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
-      e.g. 123 Confirm
-      {
-        // Completed state start
-      }
-      Thank you! We've added your card details Continue
-      <div className="attribution">
-        Challenge by{' '}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor
-        </a>
-        . Coded by <a href="#">Your Name Here</a>.
+    <div className="relative h-dvh w-full flex flex-col lg:flex-row gap-0 lg:gap-32 text-sm lg:text-base">
+      <div
+        className="relative top-0 left-0 w-full h-1/3 lg:h-full lg:w-1/3 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        <CreditCardBack />
+        <CreditCardFront />
+      </div>
+
+      <div className="flex-grow flex justify-center items-center m-5">
+        <CredentialsForm />
       </div>
     </div>
   )

@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('@public/fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  html {
+    font-family: 'SpaceGrotesk', system-ui, sans-serif;
+  }
+
+  :root {
+    --color-accent: 278 68% 11%;
+    --color-foreground: 0 0% 100%;
+    --color-muted: 260 2% 76%;
+    --color-danger: 0 100% 66%;
+    --color-muted-dark: 279 6% 55%;
+  }
+}
+
+@layer components {
+  .gradient-border {
+    padding: 0.5rem;
+    border: double 1px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(white, white),
+      linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+}
