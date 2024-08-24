@@ -6,7 +6,7 @@ export default function CreditCardFront() {
   const credentials = useAppSelector((state) => state.credentials.value)
   return (
     <CreditCard
-      className="left-4 top-[7.25rem] lg:left-[45%] lg:top-36 w-full"
+      className="left-4 top-[7.25rem] lg:left-[45%] lg:top-1/2 lg:-translate-y-52 w-full"
       imageURL={bgCreditFront}
     >
       <div className="relative z-10 h-full py-4 lg:py-5 px-6 lg:px-7 flex flex-col justify-between">
