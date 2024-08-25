@@ -29,24 +29,24 @@ export const validatedSlice = createSlice({
   name: 'validated',
   initialState,
   reducers: {
-    setNameValidated: (state, payload: PayloadAction<boolean>) => {
-      state.value.name = payload.payload
+    setNameValidated: (state, action: PayloadAction<boolean>) => {
+      state.value.name = action.payload
       state.value.notEmptied = true
     },
-    setNumberValidated: (state, payload: PayloadAction<boolean>) => {
-      state.value.number = payload.payload
+    setNumberValidated: (state, action: PayloadAction<boolean>) => {
+      state.value.number = action.payload
       state.value.notEmptied = true
     },
-    setMonthValidated: (state, payload: PayloadAction<boolean>) => {
-      state.value.month = payload.payload
+    setMonthValidated: (state, action: PayloadAction<boolean>) => {
+      state.value.month = action.payload
       state.value.notEmptied = true
     },
-    setYearValidated: (state, payload: PayloadAction<boolean>) => {
-      state.value.year = payload.payload
+    setYearValidated: (state, action: PayloadAction<boolean>) => {
+      state.value.year = action.payload
       state.value.notEmptied = true
     },
-    setCvcValidated: (state, payload: PayloadAction<boolean>) => {
-      state.value.cvc = payload.payload
+    setCvcValidated: (state, action: PayloadAction<boolean>) => {
+      state.value.cvc = action.payload
       state.value.notEmptied = true
     },
     setInitValidated: (state) => {

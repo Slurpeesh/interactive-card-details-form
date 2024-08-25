@@ -27,37 +27,37 @@ export const credentialsSlice = createSlice({
   name: 'credentials',
   initialState,
   reducers: {
-    setName: (state, payload: PayloadAction<string>) => {
-      if (payload.payload) {
-        state.value.name = payload.payload
+    setName: (state, action: PayloadAction<string>) => {
+      if (action.payload) {
+        state.value.name = action.payload
       } else {
         state.value.name = 'Name Surname'
       }
     },
-    setNumber: (state, payload: PayloadAction<string>) => {
-      if (payload.payload) {
-        state.value.number = payload.payload
+    setNumber: (state, action: PayloadAction<string>) => {
+      if (action.payload) {
+        state.value.number = action.payload
       } else {
         state.value.number = '0000 0000 0000 0000'
       }
     },
-    setMonth: (state, payload: PayloadAction<string>) => {
-      if (payload.payload) {
-        state.value.month = payload.payload
+    setMonth: (state, action: PayloadAction<string>) => {
+      if (action.payload) {
+        state.value.month = action.payload
       } else {
         state.value.month = '00'
       }
     },
-    setYear: (state, payload: PayloadAction<string>) => {
-      if (payload.payload) {
-        state.value.year = payload.payload
+    setYear: (state, action: PayloadAction<string>) => {
+      if (action.payload) {
+        state.value.year = action.payload
       } else {
         state.value.year = '00'
       }
     },
-    setCvc: (state, payload: PayloadAction<string>) => {
-      if (payload.payload) {
-        state.value.cvc = payload.payload
+    setCvc: (state, action: PayloadAction<string>) => {
+      if (action.payload) {
+        state.value.cvc = action.payload
       } else {
         state.value.cvc = '000'
       }
